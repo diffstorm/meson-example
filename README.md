@@ -17,12 +17,12 @@ This is a simple example project to demonstrate a reusable Meson setup with a C+
 
 ```
 +-- crc32
-¦   +-- crc32.c
-¦   +-- crc32.h
-¦   +-- meson.build
+Â¦   +-- crc32.c
+Â¦   +-- crc32.h
+Â¦   +-- meson.build
 +-- app
-¦   +-- main.cpp
-¦   +-- meson.build
+Â¦   +-- main.cpp
+Â¦   +-- meson.build
 +-- meson.build
 ```
 
@@ -61,21 +61,21 @@ To configure the build directory and compile the project, run:
 
 ```sh
 meson setup build
-ninja -C build
+meson compile -C build
 ```
 
 To build in release mode, use:
 
 ```sh
 meson setup --buildtype=release build
-ninja -C build
+meson compile -C build
 ```
 
 To build in debug mode, use:
 
 ```sh
 meson setup --buildtype=debug build
-ninja -C build
+meson compile -C build
 ```
 
 ## Running the Application
@@ -119,7 +119,7 @@ Build targets in project: 2
 
 Found ninja-1.10.1 at /usr/bin/ninja
 
-meson-example$ ninja -C build
+meson-example$ meson compile -C build
 ninja: Entering directory `build'
 [4/4] Linking target app/crc32-app
 
@@ -129,4 +129,4 @@ CRC32 Checksum: d6eeb1c5
 
 ## :snowman: Author
 
-Eray Öztürk ([@diffstorm](https://github.com/diffstorm))
+Eray Ã–ztÃ¼rk ([@diffstorm](https://github.com/diffstorm))
